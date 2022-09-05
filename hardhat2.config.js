@@ -1,6 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox");
 
-task("accounts", "Prints the list of accounts", async (taskArg, hre) => {
+task("accounts", "Prints the list of ccounts", async (taskArg, hre) => {
   const accounts = await hre.ethers.getSigners();
   //? 'hre' is shortform of hardhat which is calling 'ethers' library inside it and
   //? ..then calling 'getSigners()' function. 'Signer' stores informations of accounts and more
@@ -11,9 +11,8 @@ task("accounts", "Prints the list of accounts", async (taskArg, hre) => {
     const balance = await account.getBalance();
 
     // console.log(`${address} has balance ${balance} wei`); //? will return balance in wei
-    console.log(
-      `Address ${address} has balance ${hre.ethers.utils.formatEther(balance)} Ethers`
-    ); //? will return balance in ethers
+    // console.log(`Address ${address} has balance ${hre.ethers.utils.formatEther(balance)} Ethers`); //? will return balance in ethers
+    console.log(account); //? It will show all the details of the accounts
   }
 });
 /** @type import('hardhat/config').HardhatUserConfig */
