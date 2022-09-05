@@ -1,8 +1,8 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config({ path: ".env" });
 
+//have to set up env file using: 'npm install dotenv'
 const ALCHEMY_API_KEY_URL = process.env.ALCHEMY_API_KEY_URL;
-
 const RINKEBY_PRIVATE_KEY = process.env.RINKEBY_PRIVATE_KEY;
 
 module.exports = {
