@@ -22,7 +22,7 @@ async function call(){
     await balanceTransfer.wait();
     console.log(`Amount transferred: ${ethers.utils.formatEther(balanceTransfer.value)}`);
 
-
+//! Checking balance after balance transfer
     console.log(`Sender Balance of account ${await wallet.getAddress()} after transaction is ${ethers.utils.formatEther(await wallet.getBalance())}`);
 
     const bal2 = await provider.getBalance(receiverAccount);
