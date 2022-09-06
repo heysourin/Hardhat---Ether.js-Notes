@@ -10,9 +10,9 @@ const wallet = new ethers.Wallet(privateKey, provider);
 
 
 async function call() {
-    const bal = await provider.getBalance(receiverAccount);
     console.log("Sender's balance before transfer->", await wallet.getAddress(), ":" , ethers.utils.formatEther(await wallet.getBalance()));//* Our own a/c address, accessing with wallet(privateKey, provider)
 
+    const bal = await provider.getBalance(receiverAccount);
     console.log("Receiver's balance before transfer->", receiverAccount, ":" , ethers.utils.formatEther(bal));//*of the one, we want to send ether, accessing with receiverAccount address
     
     const transfer = await wallet.sendTransaction({
@@ -22,8 +22,9 @@ async function call() {
     
     await transfer.wait();
     
-    const bal2 = await provider.getBalance(receiverAccount);
     console.log("Sender's balance after transfer->",await wallet.getAddress(), ":" ,ethers.utils.formatEther(await wallet.getBalance()));
+    
+    const bal2 = await provider.getBalance(receiverAccount);
     console.log("Receiver's balance after transfer->", receiverAccount, ":" ,ethers.utils.formatEther(bal2));
     
     // console.log(transfer)  //* it prints the details of the transaction
@@ -31,3 +32,5 @@ async function call() {
 }
 
 call();
+
+//Run with 'node accounts.js' in terminals
