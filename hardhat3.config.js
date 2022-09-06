@@ -18,8 +18,8 @@ module.exports = {
   networks: {
     hardhat: {},
     goerli: {
-      url: "https://eth-goerli.g.alchemy.com/v2/iNqVsjbAtSOEgN6320pRN643VAJgOkHf",
-      accounts: ["3fea66db17867a169e57be559a11a0e1e63ecdd71bffb815371ef07129f39146"]
+      url: "",
+      accounts: [""]
     }
   },
 };
