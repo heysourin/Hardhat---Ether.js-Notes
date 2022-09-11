@@ -76,7 +76,6 @@ async function call() {
 
   const block = await provider.getBlockNumber();
   //If you want to see few specific transactions:
-  
 //   const transactions = await contract.queryFilter("Transaction",block-20, block);
   const transactions = await contract.queryFilter("Transaction");
   transactions.map((item) => {
