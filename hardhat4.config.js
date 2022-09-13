@@ -21,7 +21,7 @@ task("accounts", "Prints the list of ccounts", async (taskArg, hre) => {
 // /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.9",
-  defaultNetwork: "hardhat",
+  defaultNetwork: "hardhat",//change it to 'goerli' or anything to access your account
   networks: {
     hardhat: {},
     goerli: {
